@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="accidents.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accidents</title>
+</head>
+<body>
+<div class="bg-img">
+
+    <div class="container" id="container">
+        <h1>Accidents</h1>
+    </div>
+</div>
+<script type="text/javascript">
+    const url = '/accidents';
+    $.ajax({
+        url: url,
+        type: "GET",
+        success: function (results) {
+            console.log(results);
+            for (let key in results) {
+                temp = parseInt(key) + 1;
+                result = results[key];
+                var map_link = "https://www.google.com/maps/search/?api=1&query=" + result[1]['latitude'] + "," + result[1]['longitude'];
+                document.getElementById("container").innerHTML += '<h2>Accident ' + temp + ':</h2>' + '<p>' + result[0] + ' ' + "<a target='_blank' href=" + map_link + ">" + result[1]['latitude'] + ' ' + result[1]['longitude'] + '</a> ' + result[2] + ' </p>';
+                console.log("vehicle model: ".concat(result[0]));
+                console.log("vehicle's location: (".concat(result[1]['latitude']).concat(", ").concat(result[1]['longitude']).concat(")"));
+                console.log("accident's time:  ".concat(result[2]));
+            }
+        },
+        error: function (error) {
+            console.log(`Error${error}`)
+
+        }
+    });
+</script>
+
+</body>
+</html>

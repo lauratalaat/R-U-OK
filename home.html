@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Cars</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        #background {
+            background-image: url("https://cnet3.cbsistatic.com/img/oV61ibPYCSwd_22VABr2M1osWqE=/770x578/2016/12/14/8ea41d9d-2a76-4f35-9d9d-1ef472f7d9dc/car-photography-how-to.jpg");
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="background">
+        <br><br>
+        <button type="button" style="width:70px; height:50px; margin: 0 auto; display: block" onclick="addCar();">Add new car</button>
+        <br><br>
+        <ul id="list"></ul>
+    </div>
+    <script>
+        $.ajax({
+            url: "/vehicles",
+            method:"GET",
+            success: function (data){
+                console.log(data);
+                for(var i=0;i<data.length;i++) {
+                    var li = document.createElement('li');
+                    li.innerText = (i + 1) + ". " + data[i];
+                    document.getElementById('list').appendChild(li);
+                }
+
+            }
+        })
+        function addCar(){
+            window.location.href = "/register_vehicle";
+        }
+    </script>
+  </body>
+</html>

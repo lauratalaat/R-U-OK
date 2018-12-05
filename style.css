@@ -1,0 +1,162 @@
+/* this code yet not functioning its full capaicity*/
+body{
+    /* background: #F2F3ee url("") top left repeat; */
+    width:100%;
+    height:100%;
+    color: #4b2707;
+    font-size:14px;
+    font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiapsed;
+    text-rendering: optimizelegibilty;
+    /* background-size:contain; */
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.container {
+    width: 924px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+
+h1,h2 {
+    color: darkblue;
+    font-size:40px;
+    font-weight: normal;
+    font-family: 'Love Ya Like A Sister', cursive;
+    line-height: 44px;
+    margin: 0;
+}
+/*This needs to be checked again. Not functioning the way its suppose to*/ 
+h1{
+    text-align: center;
+    padding: 0 0 20px;
+    background: image('header-divider.png') bottom center no-repeat;
+}
+
+h1 em{
+    font-style:normal;
+    color: crimson;
+}
+
+h2{
+    font-size:34px;
+}
+
+h3{
+    margin: 0;
+}
+
+p.lead{
+    font-size: 30px;
+    font-weight: 300;
+    text-align:center;
+    margin: 10px 0;
+}
+
+p{
+    margin: 0;
+}
+
+a:link {
+    color: #d17f38;
+}
+
+a:visited {
+    color: #d17f38;
+}
+
+a.hover{
+    color: #4b2707;
+}
+
+/* code yet not working will come back to it later*/
+hr{
+    border: none;
+    height: 33px;
+    width: 333px;
+    margin: 30px auto;
+    background:('header-divider.png') center center no-repeat;
+}
+header nav{
+    text-align: center;
+}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    line-height: 141px;
+}
+
+header nav ul li {
+    display: inline-block; 
+    padding: 0 20px;
+}
+header nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* this is still not functiong yet image has not been selected*/
+header nav ul li a:hover {
+    color:#4b2707;
+    padding-top: 20px;
+    background: url('') top center no-repeat;
+
+}
+/* Url image has yet to be inserted*/
+header nav ul li#logo a {
+    display: block;
+    width:292px;
+    height:141px;
+    background: url('')center center no-repeat;
+    /*text-indent: -9999px; */
+}
+
+header nav ul li#logo a:hover{
+    padding:0;
+    background: url('')
+}
+
+#hero { 
+    background: #9d8589 url('')top left repeat repeat;
+}
+
+#hero .container {
+    padding-left: 0;
+    position: relative;
+    width:100%;
+    height:100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+/* this header has yet to be inserted*/
+#hero .large-ribbon {
+    height: 190px;
+    width: 150px;
+    background:url('')top left no repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    right: -30px;
+}
+/* this might be for registraiton */
+#story-exerpt {
+    width: 520px;
+    margin-right: 24px;
+    float: left;
+    font-size: 16px;
+}
+
+/* this needs to be revised*
+#best-donut {
+    background: url('') left center no-repeat;
+    padding: 30 pixels 0 30px 130px;
+    float: left;
+   /* width
+}
